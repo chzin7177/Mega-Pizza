@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Oferta Premium Limitada</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Oferta Delivery Digital">
+  <meta property="og:description" content="Acesso Premium sem entrega física. Oferta limitada.">
+  <meta property="og:image" content="https://i.imgur.com/IYH5e2T.png">
+  <meta property="og:url" content="https://mega-pizza.vercel.app">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    h1 { font-size: 2em; margin-bottom: 20px; }
+
+    .timer {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #04d361;
+    }
+
+    .cta-button {
+      background: #04d361;
+      color: #fff;
+      padding: 14px 26px;
+      border: none;
+      border-radius: 12px;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px 18px;
+      font-size: 24px;
+      text-decoration: none;
+      box-shadow: 0 0 10px #25D366;
+    }
+  </style>
+  <script>
+    let time = 600;
+    function startCountdown() {
+      const timer = document.getElementById('timer');
+      const interval = setInterval(() => {
+        let minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+        timer.textContent = minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+        time--;
+        if (time < 0) clearInterval(interval);
+      }, 1000);
+    }
+    window.onload = startCountdown;
+  </script>
+
+  <script>
+    console.log("Pixel de rastreio carregado...");
+  </script>
+</head>
+<body>
+  <h1>Oferta Digital Premium</h1>
+  <div class="timer" id="timer">10:00</div>
+  <a href="https://pag.ae/7_PkkHeTG" class="cta-button" target="_blank">Acessar Benefício Agora</a>
+  <a class="whatsapp-button" href="https://wa.me/5541999999999" target="_blank">💬</a>
+</body>
+</html>
